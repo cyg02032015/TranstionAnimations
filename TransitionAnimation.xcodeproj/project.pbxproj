@@ -12,6 +12,9 @@
 		E4A01E401DD0708500439717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A01E3E1DD0708500439717 /* Main.storyboard */; };
 		E4A01E421DD0708500439717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A01E411DD0708500439717 /* Assets.xcassets */; };
 		E4A01E451DD0708500439717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A01E431DD0708500439717 /* LaunchScreen.storyboard */; };
+		E4A01E7F1DD5BF6C00439717 /* CrossDissolveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E7E1DD5BF6C00439717 /* CrossDissolveViewController.swift */; };
+		E4A01E811DD5D39C00439717 /* CrossDissolveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E801DD5D39C00439717 /* CrossDissolveAnimator.swift */; };
+		E4A01E831DD5D77400439717 /* CrossSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E821DD5D77400439717 /* CrossSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		E4A01E411DD0708500439717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4A01E441DD0708500439717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4A01E461DD0708500439717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4A01E7E1DD5BF6C00439717 /* CrossDissolveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveViewController.swift; sourceTree = "<group>"; };
+		E4A01E801DD5D39C00439717 /* CrossDissolveAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveAnimator.swift; sourceTree = "<group>"; };
+		E4A01E821DD5D77400439717 /* CrossSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossSecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +62,23 @@
 			children = (
 				E4A01E3A1DD0708500439717 /* AppDelegate.swift */,
 				E4A01E3C1DD0708500439717 /* ViewController.swift */,
+				E4A01E7D1DD5BF6C00439717 /* CrossDissolve */,
 				E4A01E3E1DD0708500439717 /* Main.storyboard */,
 				E4A01E411DD0708500439717 /* Assets.xcassets */,
 				E4A01E431DD0708500439717 /* LaunchScreen.storyboard */,
 				E4A01E461DD0708500439717 /* Info.plist */,
 			);
 			path = TransitionAnimation;
+			sourceTree = "<group>";
+		};
+		E4A01E7D1DD5BF6C00439717 /* CrossDissolve */ = {
+			isa = PBXGroup;
+			children = (
+				E4A01E7E1DD5BF6C00439717 /* CrossDissolveViewController.swift */,
+				E4A01E821DD5D77400439717 /* CrossSecondViewController.swift */,
+				E4A01E801DD5D39C00439717 /* CrossDissolveAnimator.swift */,
+			);
+			path = CrossDissolve;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A01E831DD5D77400439717 /* CrossSecondViewController.swift in Sources */,
+				E4A01E811DD5D39C00439717 /* CrossDissolveAnimator.swift in Sources */,
 				E4A01E3D1DD0708500439717 /* ViewController.swift in Sources */,
 				E4A01E3B1DD0708500439717 /* AppDelegate.swift in Sources */,
+				E4A01E7F1DD5BF6C00439717 /* CrossDissolveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -248,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

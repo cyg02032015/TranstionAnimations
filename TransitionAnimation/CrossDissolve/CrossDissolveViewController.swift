@@ -15,4 +15,7 @@ class CrossDissolveViewController: UIViewController {
         view.backgroundColor = UIColor.white
         
     }
+    @IBAction func toSecondViewController(sender: UIButton) {
+        GGLog(message: "lalala")
+    }
 }

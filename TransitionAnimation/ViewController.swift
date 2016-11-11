@@ -8,18 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public func GGLog<T>(message : T, file : String = #file, lineNumber : Int = #line) {
+    #if DEBUG
+        let fileName = (file as NSString).lastPathComponent
+        print("[\(fileName):line:\(lineNumber)]- \(message)")
+    #endif
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+class ViewController: UITableViewController {
+    
+    @IBAction func unwindMenu(segue: UIStoryboardSegue) {
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
