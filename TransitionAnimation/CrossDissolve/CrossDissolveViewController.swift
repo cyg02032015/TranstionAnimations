@@ -16,6 +16,24 @@ class CrossDissolveViewController: UIViewController {
         
     }
     @IBAction func toSecondViewController(sender: UIButton) {
-        GGLog(message: "lalala")
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "CrossSecondViewController") else {
+            GGLog(message: "second viewcontroller is nil")
+            return
+        }
+        vc.modalPresentationStyle = .fullScreen
+        vc.transitioningDelegate = self
+        self.present(vc, animated: true) { }
+    }
+}
+
+extension CrossDissolveViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        GGLog(message: "=====================\n present \npresented = \(presented)\n presenting = \(presenting)\n sourceVC = \(source)")
+        return CrossDissolveAnimator()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        GGLog(message: "=====================\n dismissed \n dismissed = \(dismissed)\n")
+        return CrossDissolveAnimator()
     }
 }

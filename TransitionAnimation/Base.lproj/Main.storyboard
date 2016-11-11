@@ -280,10 +280,10 @@
             </objects>
             <point key="canvasLocation" x="2570" y="757"/>
         </scene>
-        <!--Cross Dissolve View Controller-->
+        <!--Cross Second View Controller-->
         <scene sceneID="mDZ-a8-6h4">
             <objects>
-                <viewController storyboardIdentifier="CrossDissolveViewController" id="axi-1X-rS3" customClass="CrossDissolveViewController" customModule="TransitionAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CrossSecondViewController" id="axi-1X-rS3" customClass="CrossSecondViewController" customModule="TransitionAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OzP-n6-fCd"/>
                         <viewControllerLayoutGuide type="bottom" id="mPu-DF-nQb"/>
