@@ -14,12 +14,10 @@ class CrossDissolveAnimator: NSObject {
 
 extension CrossDissolveAnimator: UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-//        GGLog(message: "transitionDuration = \(GGLogContext(context: transitionContext))")
         return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-//        GGLog(message: "transitionDuration = \(GGLogContext(context: transitionContext))")
         let fromController = transitionContext.viewController(forKey: .from)
         let toController = transitionContext.viewController(forKey: .to)
         let containerView = transitionContext.containerView
@@ -31,16 +29,22 @@ extension CrossDissolveAnimator: UIViewControllerAnimatedTransitioning {
             fromView = transitionContext.view(forKey: .from)
             toView = transitionContext.view(forKey: .to)
         }
-        toView?.frame = CGRect(x: fromView!.frame.origin.x, y: fromView!.frame.maxY / 2, width: fromView!.frame.width, height: fromView!.frame.height)
-        toView?.alpha = 0
         
+        fromView?.frame = transitionContext.initialFrame(for: fromController!)
+        toView?.frame = transitionContext.finalFrame(for: toController!)
+        fromView?.alpha = 1
+        toView?.alpha = 0
         containerView.addSubview(toView!)
-        GGLog(message: "toviewFrame = \(toView!.frame)")
-        GGLog(message: "finalFrame = \(transitionContext.finalFrame(for: toController!))")
+        GGLog(message: "fromView = \(fromView)")
+        GGLog(message: "toView = \(toView)")
+        GGLog(message: "fromView init = \(transitionContext.initialFrame(for: fromController!))")
+        GGLog(message: "fromView final = \(transitionContext.finalFrame(for: fromController!))")
+        GGLog(message: "toView init = \(transitionContext.initialFrame(for: toController!))")
+        GGLog(message: "toView final = \(transitionContext.finalFrame(for: toController!))")
         let duration = self.transitionDuration(using: transitionContext)
-        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveLinear, animations: { 
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveLinear, animations: {
+            fromView?.alpha = 0
             toView!.alpha = 1
-            toView!.frame = transitionContext.finalFrame(for: toController!)
             }) { (isFinish) in
                 if isFinish {
                     let cancelled = transitionContext.transitionWasCancelled

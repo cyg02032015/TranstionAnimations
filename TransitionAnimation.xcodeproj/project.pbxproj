@@ -15,6 +15,8 @@
 		E4A01E7F1DD5BF6C00439717 /* CrossDissolveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E7E1DD5BF6C00439717 /* CrossDissolveViewController.swift */; };
 		E4A01E811DD5D39C00439717 /* CrossDissolveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E801DD5D39C00439717 /* CrossDissolveAnimator.swift */; };
 		E4A01E831DD5D77400439717 /* CrossSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E821DD5D77400439717 /* CrossSecondViewController.swift */; };
+		E4A01E8F1DD9A65000439717 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E8E1DD9A65000439717 /* SwipeViewController.swift */; };
+		E4A01E911DD9A65C00439717 /* SwipeSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E901DD9A65C00439717 /* SwipeSecondController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E4A01E7E1DD5BF6C00439717 /* CrossDissolveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveViewController.swift; sourceTree = "<group>"; };
 		E4A01E801DD5D39C00439717 /* CrossDissolveAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveAnimator.swift; sourceTree = "<group>"; };
 		E4A01E821DD5D77400439717 /* CrossSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossSecondViewController.swift; sourceTree = "<group>"; };
+		E4A01E8E1DD9A65000439717 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeViewController.swift; path = TransitionAnimation/Swipe/SwipeViewController.swift; sourceTree = SOURCE_ROOT; };
+		E4A01E901DD9A65C00439717 /* SwipeSecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeSecondController.swift; path = TransitionAnimation/Swipe/SwipeSecondController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				E4A01E3A1DD0708500439717 /* AppDelegate.swift */,
 				E4A01E3C1DD0708500439717 /* ViewController.swift */,
 				E4A01E7D1DD5BF6C00439717 /* CrossDissolve */,
+				E4A01E8B1DD9A61000439717 /* Swipe */,
 				E4A01E3E1DD0708500439717 /* Main.storyboard */,
 				E4A01E411DD0708500439717 /* Assets.xcassets */,
 				E4A01E431DD0708500439717 /* LaunchScreen.storyboard */,
@@ -79,6 +84,16 @@
 				E4A01E801DD5D39C00439717 /* CrossDissolveAnimator.swift */,
 			);
 			path = CrossDissolve;
+			sourceTree = "<group>";
+		};
+		E4A01E8B1DD9A61000439717 /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				E4A01E8E1DD9A65000439717 /* SwipeViewController.swift */,
+				E4A01E901DD9A65C00439717 /* SwipeSecondController.swift */,
+			);
+			name = Swipe;
+			path = CrossDissolve/Swipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +172,10 @@
 				E4A01E831DD5D77400439717 /* CrossSecondViewController.swift in Sources */,
 				E4A01E811DD5D39C00439717 /* CrossDissolveAnimator.swift in Sources */,
 				E4A01E3D1DD0708500439717 /* ViewController.swift in Sources */,
+				E4A01E911DD9A65C00439717 /* SwipeSecondController.swift in Sources */,
 				E4A01E3B1DD0708500439717 /* AppDelegate.swift in Sources */,
 				E4A01E7F1DD5BF6C00439717 /* CrossDissolveViewController.swift in Sources */,
+				E4A01E8F1DD9A65000439717 /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,24 +42,7 @@
                                             <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aTS-ut-bF8">
-                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="LWb-OG-Pw1" style="IBUITableViewCellStyleDefault" id="Ccq-h6-yck">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ccq-h6-yck" id="2Dm-q9-bKm">
-                                            <frame key="frameInset" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LWb-OG-Pw1">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="CrossDissolve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aTS-ut-bF8">
                                                     <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -69,7 +52,27 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="geu-VY-4Ts" kind="show" id="axj-c3-ibo"/>
+                                            <segue destination="geu-VY-4Ts" kind="show" id="Rqa-Ud-86m"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="LWb-OG-Pw1" style="IBUITableViewCellStyleDefault" id="Ccq-h6-yck">
+                                        <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ccq-h6-yck" id="2Dm-q9-bKm">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Swipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LWb-OG-Pw1">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="a5M-uy-0ze" kind="show" id="fzi-ss-fLV"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="E6w-xM-4sK" style="IBUITableViewCellStyleDefault" id="UOg-tL-ozd">
@@ -280,6 +283,90 @@
             </objects>
             <point key="canvasLocation" x="2570" y="757"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AUs-b1-za2">
+            <objects>
+                <navigationController id="a5M-uy-0ze" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6oA-sg-25a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1Kl-mQ-UMf" kind="relationship" relationship="rootViewController" id="IBQ-Bb-XD1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aiH-5o-ks3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="1451"/>
+        </scene>
+        <!--Swipe View Controller-->
+        <scene sceneID="irW-gp-u1z">
+            <objects>
+                <viewController id="1Kl-mQ-UMf" customClass="SwipeViewController" customModule="TransitionAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4h0-xY-fJR"/>
+                        <viewControllerLayoutGuide type="bottom" id="VwR-Lm-Prm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kQ9-4L-BqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGY-kU-3fm">
+                                <state key="normal" title="Present"/>
+                                <connections>
+                                    <action selector="goSecond:" destination="1Kl-mQ-UMf" eventType="touchUpInside" id="oOh-2W-YLY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oGY-kU-3fm" firstAttribute="centerY" secondItem="kQ9-4L-BqZ" secondAttribute="centerY" id="FfT-Ec-su2"/>
+                            <constraint firstItem="oGY-kU-3fm" firstAttribute="centerX" secondItem="kQ9-4L-BqZ" secondAttribute="centerX" id="ZML-LS-urm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ceg-53-nKp">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="6ge-lQ-pSp">
+                            <connections>
+                                <segue destination="V7E-8r-OEc" kind="unwind" unwindAction="unwindMenuWithSegue:" id="MEc-hb-8Qc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pQ-qq-Wuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="V7E-8r-OEc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="1453"/>
+        </scene>
+        <!--Swipe Second Controller-->
+        <scene sceneID="Lsm-Vg-ghp">
+            <objects>
+                <viewController storyboardIdentifier="SwipeSecondController" id="GKV-jj-8yo" customClass="SwipeSecondController" customModule="TransitionAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q9K-jc-S8k"/>
+                        <viewControllerLayoutGuide type="bottom" id="YlS-Ha-x5J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ldk-2G-QSR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoK-Cz-8bk">
+                                <state key="normal" title="DISMISS"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="GKV-jj-8yo" eventType="touchUpInside" id="IeJ-Sq-o1t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YlS-Ha-x5J" firstAttribute="top" secondItem="VoK-Cz-8bk" secondAttribute="bottom" constant="56" id="KMe-lb-Cnn"/>
+                            <constraint firstItem="VoK-Cz-8bk" firstAttribute="centerX" secondItem="ldk-2G-QSR" secondAttribute="centerX" id="dtR-u3-rfB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsS-iH-5yf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3357" y="1462"/>
+        </scene>
         <!--Cross Second View Controller-->
         <scene sceneID="mDZ-a8-6h4">
             <objects>
@@ -291,7 +378,19 @@
                     <view key="view" contentMode="scaleToFill" id="cmw-F7-Y3s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zg-lY-guo">
+                                <state key="normal" title="DISMISS"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="axi-1X-rS3" eventType="touchUpInside" id="bwF-c4-Dq2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Zg-lY-guo" firstAttribute="centerX" secondItem="cmw-F7-Y3s" secondAttribute="centerX" id="4iT-9L-OL4"/>
+                            <constraint firstItem="3Zg-lY-guo" firstAttribute="centerY" secondItem="cmw-F7-Y3s" secondAttribute="centerY" id="eur-JM-mTq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dW-pP-Opj" userLabel="First Responder" sceneMemberID="firstResponder"/>

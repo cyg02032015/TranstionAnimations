@@ -1,24 +1,25 @@
 //
-//  CrossSecondViewController.swift
+//  SwipeViewController.swift
 //  TransitionAnimation
 //
-//  Created by Youngkook on 2016/11/11.
+//  Created by Youngkook on 2016/11/14.
 //  Copyright © 2016年 Youngkook. All rights reserved.
 //
 
 import UIKit
 
-class CrossSecondViewController: UIViewController {
+class SwipeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.red
+
         // Do any additional setup after loading the view.
     }
-    @IBAction func dismiss(_ sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
-    }
 
+    @IBAction func goSecond(_ sender: AnyObject) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SwipeSecondController")
+        self.present(vc!, animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
