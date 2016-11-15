@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8126E381DDB61190043BA10 /* SwipeTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8126E371DDB61190043BA10 /* SwipeTransitionDelegate.swift */; };
 		E4A01E3B1DD0708500439717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E3A1DD0708500439717 /* AppDelegate.swift */; };
 		E4A01E3D1DD0708500439717 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E3C1DD0708500439717 /* ViewController.swift */; };
 		E4A01E401DD0708500439717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A01E3E1DD0708500439717 /* Main.storyboard */; };
@@ -19,10 +20,10 @@
 		E4A01E911DD9A65C00439717 /* SwipeSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E901DD9A65C00439717 /* SwipeSecondController.swift */; };
 		E4A01E951DDAEFA300439717 /* SwipeTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E941DDAEFA300439717 /* SwipeTransitionController.swift */; };
 		E4A01E971DDAEFBD00439717 /* SwipeTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E961DDAEFBD00439717 /* SwipeTransitionAnimator.swift */; };
-		E4A01E991DDB01A600439717 /* SwipeTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E981DDB01A600439717 /* SwipeTransitionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D8126E371DDB61190043BA10 /* SwipeTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeTransitionDelegate.swift; path = TransitionAnimation/Swipe/SwipeTransitionDelegate.swift; sourceTree = SOURCE_ROOT; };
 		E4A01E371DD0708500439717 /* TransitionAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A01E3A1DD0708500439717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4A01E3C1DD0708500439717 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		E4A01E901DD9A65C00439717 /* SwipeSecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeSecondController.swift; path = TransitionAnimation/Swipe/SwipeSecondController.swift; sourceTree = SOURCE_ROOT; };
 		E4A01E941DDAEFA300439717 /* SwipeTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeTransitionController.swift; path = TransitionAnimation/Swipe/SwipeTransitionController.swift; sourceTree = SOURCE_ROOT; };
 		E4A01E961DDAEFBD00439717 /* SwipeTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeTransitionAnimator.swift; path = TransitionAnimation/Swipe/SwipeTransitionAnimator.swift; sourceTree = SOURCE_ROOT; };
-		E4A01E981DDB01A600439717 /* SwipeTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeTransitionDelegate.swift; path = ../../Swipe/SwipeTransitionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +97,9 @@
 			children = (
 				E4A01E8E1DD9A65000439717 /* SwipeViewController.swift */,
 				E4A01E901DD9A65C00439717 /* SwipeSecondController.swift */,
+				D8126E371DDB61190043BA10 /* SwipeTransitionDelegate.swift */,
 				E4A01E961DDAEFBD00439717 /* SwipeTransitionAnimator.swift */,
 				E4A01E941DDAEFA300439717 /* SwipeTransitionController.swift */,
-				E4A01E981DDB01A600439717 /* SwipeTransitionDelegate.swift */,
 			);
 			name = Swipe;
 			path = CrossDissolve/Swipe;
@@ -182,7 +182,7 @@
 				E4A01E831DD5D77400439717 /* CrossSecondViewController.swift in Sources */,
 				E4A01E811DD5D39C00439717 /* CrossDissolveAnimator.swift in Sources */,
 				E4A01E3D1DD0708500439717 /* ViewController.swift in Sources */,
-				E4A01E991DDB01A600439717 /* SwipeTransitionDelegate.swift in Sources */,
+				D8126E381DDB61190043BA10 /* SwipeTransitionDelegate.swift in Sources */,
 				E4A01E911DD9A65C00439717 /* SwipeSecondController.swift in Sources */,
 				E4A01E971DDAEFBD00439717 /* SwipeTransitionAnimator.swift in Sources */,
 				E4A01E3B1DD0708500439717 /* AppDelegate.swift in Sources */,
@@ -351,6 +351,7 @@
 				E4A01E4B1DD0708500439717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,13 +12,13 @@ class SwipeViewController: UIViewController {
     lazy var second: SwipeSecondController = {
         return self.storyboard!.instantiateViewController(withIdentifier: "SwipeSecondController")
     }() as! SwipeSecondController
-    lazy var interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(SwipeViewController.interactiveTransitionRecognizerAction(_:)))
     lazy var customTransitionDelegate: SwipeTransitionDelegate = SwipeTransitionDelegate()
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        let interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(SwipeViewController.interactiveTransitionRecognizerAction(_:)))
         interactiveTransitionRecognizer.edges = .right
-        view.addGestureRecognizer(interactiveTransitionRecognizer)
+        self.view.addGestureRecognizer(interactiveTransitionRecognizer)
         self.second.transitioningDelegate = customTransitionDelegate
         self.second.modalPresentationStyle = .fullScreen
     }
@@ -30,8 +30,9 @@ class SwipeViewController: UIViewController {
     }
     
     func animationConfig(_ sender: AnyObject) {
+        // 判断是点击按钮跳转还是手势跳转
         if sender.isKind(of: UIGestureRecognizer.self) {
-            customTransitionDelegate.gestureRecognizer = interactiveTransitionRecognizer
+            customTransitionDelegate.gestureRecognizer = sender as! UIScreenEdgePanGestureRecognizer
         } else {
             customTransitionDelegate.gestureRecognizer = nil
         }

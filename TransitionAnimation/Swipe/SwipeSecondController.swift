@@ -8,53 +8,43 @@
 
 import UIKit
 
+private extension Selector {
+    static let interactiveTransitionRecognizerAction = #selector(SwipeSecondController.interactiveTransitionRecognizerAction(_:))
+}
+
 class SwipeSecondController: UIViewController {
     
-    lazy var interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(SwipeSecondController.interactiveTransitionRecognizerAction(gesture:)))
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.red
-        self.interactiveTransitionRecognizer.edges = .left
+        let interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: .interactiveTransitionRecognizerAction)
+        interactiveTransitionRecognizer.edges = .left
         view.addGestureRecognizer(interactiveTransitionRecognizer)
     }
     
-    func interactiveTransitionRecognizerAction(gesture: UIScreenEdgePanGestureRecognizer) {
+    func interactiveTransitionRecognizerAction(_ gesture: UIScreenEdgePanGestureRecognizer) {
         if gesture.state == .began {
             self.animationConfig(gesture)
         }
     }
     
-    private func animationConfig(_ sender: AnyObject) {
+    @IBAction func dismiss(_ sender: AnyObject) {
+        self.animationConfig(sender)
+    }
+}
+
+extension SwipeSecondController {
+    /// fileprivate 文件内私有 而private是 类内或者结构体内私有 swift2.0的  private 对应 3.0的 fileprivate
+    fileprivate func animationConfig(_ sender: AnyObject) {
         if let transitioningDelegate = self.transitioningDelegate as? SwipeTransitionDelegate {
             if sender.isKind(of: UIGestureRecognizer.self) {
-                transitioningDelegate.gestureRecognizer = interactiveTransitionRecognizer
+                transitioningDelegate.gestureRecognizer = sender as! UIScreenEdgePanGestureRecognizer
             } else {
                 transitioningDelegate.gestureRecognizer = nil
             }
             transitioningDelegate.targetEdge = .left
         }
-        GGLog(message: "presenting = \(self.presentingViewController)")
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func dismiss(_ sender: AnyObject) {
-        self.animationConfig(sender)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

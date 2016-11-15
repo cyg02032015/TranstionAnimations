@@ -25,13 +25,15 @@ class SwipeTransitionController: UIPercentDrivenInteractiveTransition {
     func percentForGesture(gesture: UIScreenEdgePanGestureRecognizer) -> CGFloat {
         let containerView = self.transitionContext?.containerView
         let locationInView = gesture.location(in: containerView)
-        let width = containerView?.frame.width
-        let height = containerView?.frame.height
+        guard let width = containerView?.frame.width, let height = containerView?.frame.height else {
+            GGLog(message: "width or height is nil")
+            return 0
+        }
         switch self.edge {
-        case UIRectEdge.right: return (width! - locationInView.x) / width!
-        case UIRectEdge.left: return locationInView.x / width!
-        case UIRectEdge.top: return locationInView.y / height!
-        case UIRectEdge.bottom: return (height! - locationInView.y) / height!
+        case UIRectEdge.right: return (width - locationInView.x) / width
+        case UIRectEdge.left: return locationInView.x / width
+        case UIRectEdge.top: return locationInView.y / height
+        case UIRectEdge.bottom: return (height - locationInView.y) / height
         default: return 0
         }
     }

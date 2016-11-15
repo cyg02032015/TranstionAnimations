@@ -35,11 +35,12 @@ extension SwipeTransitionAnimator: UIViewControllerAnimatedTransitioning {
             fromView = fromController?.view
             toView = toController?.view
         }
-        
+        // A视图控制器present到B，那么A总是B的presentingViewController,B总是A的presentedViewController
         let isPresenting = toController?.presentingViewController == fromController
         let fromFrame = transitionContext.initialFrame(for: fromController!)
         let toFrame = transitionContext.finalFrame(for: toController!)
         
+        // 向量值 判断往哪里偏移
         var offset: CGVector!
         if self.targetEdge == .left {
             offset = CGVector(dx: 1, dy: 0)
