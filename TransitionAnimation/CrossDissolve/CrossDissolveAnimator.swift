@@ -35,12 +35,6 @@ extension CrossDissolveAnimator: UIViewControllerAnimatedTransitioning {
         fromView?.alpha = 1
         toView?.alpha = 0
         containerView.addSubview(toView!)
-        GGLog(message: "fromView = \(fromView)")
-        GGLog(message: "toView = \(toView)")
-        GGLog(message: "fromView init = \(transitionContext.initialFrame(for: fromController!))")
-        GGLog(message: "fromView final = \(transitionContext.finalFrame(for: fromController!))")
-        GGLog(message: "toView init = \(transitionContext.initialFrame(for: toController!))")
-        GGLog(message: "toView final = \(transitionContext.finalFrame(for: toController!))")
         let duration = self.transitionDuration(using: transitionContext)
         UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveLinear, animations: {
             fromView?.alpha = 0

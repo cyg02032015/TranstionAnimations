@@ -17,6 +17,9 @@
 		E4A01E831DD5D77400439717 /* CrossSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E821DD5D77400439717 /* CrossSecondViewController.swift */; };
 		E4A01E8F1DD9A65000439717 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E8E1DD9A65000439717 /* SwipeViewController.swift */; };
 		E4A01E911DD9A65C00439717 /* SwipeSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E901DD9A65C00439717 /* SwipeSecondController.swift */; };
+		E4A01E951DDAEFA300439717 /* SwipeTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E941DDAEFA300439717 /* SwipeTransitionController.swift */; };
+		E4A01E971DDAEFBD00439717 /* SwipeTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E961DDAEFBD00439717 /* SwipeTransitionAnimator.swift */; };
+		E4A01E991DDB01A600439717 /* SwipeTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A01E981DDB01A600439717 /* SwipeTransitionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		E4A01E821DD5D77400439717 /* CrossSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossSecondViewController.swift; sourceTree = "<group>"; };
 		E4A01E8E1DD9A65000439717 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeViewController.swift; path = TransitionAnimation/Swipe/SwipeViewController.swift; sourceTree = SOURCE_ROOT; };
 		E4A01E901DD9A65C00439717 /* SwipeSecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeSecondController.swift; path = TransitionAnimation/Swipe/SwipeSecondController.swift; sourceTree = SOURCE_ROOT; };
+		E4A01E941DDAEFA300439717 /* SwipeTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeTransitionController.swift; path = TransitionAnimation/Swipe/SwipeTransitionController.swift; sourceTree = SOURCE_ROOT; };
+		E4A01E961DDAEFBD00439717 /* SwipeTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeTransitionAnimator.swift; path = TransitionAnimation/Swipe/SwipeTransitionAnimator.swift; sourceTree = SOURCE_ROOT; };
+		E4A01E981DDB01A600439717 /* SwipeTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeTransitionDelegate.swift; path = ../../Swipe/SwipeTransitionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,9 @@
 			children = (
 				E4A01E8E1DD9A65000439717 /* SwipeViewController.swift */,
 				E4A01E901DD9A65C00439717 /* SwipeSecondController.swift */,
+				E4A01E961DDAEFBD00439717 /* SwipeTransitionAnimator.swift */,
+				E4A01E941DDAEFA300439717 /* SwipeTransitionController.swift */,
+				E4A01E981DDB01A600439717 /* SwipeTransitionDelegate.swift */,
 			);
 			name = Swipe;
 			path = CrossDissolve/Swipe;
@@ -169,10 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A01E951DDAEFA300439717 /* SwipeTransitionController.swift in Sources */,
 				E4A01E831DD5D77400439717 /* CrossSecondViewController.swift in Sources */,
 				E4A01E811DD5D39C00439717 /* CrossDissolveAnimator.swift in Sources */,
 				E4A01E3D1DD0708500439717 /* ViewController.swift in Sources */,
+				E4A01E991DDB01A600439717 /* SwipeTransitionDelegate.swift in Sources */,
 				E4A01E911DD9A65C00439717 /* SwipeSecondController.swift in Sources */,
+				E4A01E971DDAEFBD00439717 /* SwipeTransitionAnimator.swift in Sources */,
 				E4A01E3B1DD0708500439717 /* AppDelegate.swift in Sources */,
 				E4A01E7F1DD5BF6C00439717 /* CrossDissolveViewController.swift in Sources */,
 				E4A01E8F1DD9A65000439717 /* SwipeViewController.swift in Sources */,
