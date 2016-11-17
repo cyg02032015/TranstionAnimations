@@ -35,7 +35,6 @@ extension CustomSecondViewController {
         slider.maximumValue = Float(self.preferredContentSize.height)
         slider.minimumValue = Float(220)
         slider.value = slider.maximumValue
-        GGLog(message: "preferredContentSize = \(self.preferredContentSize)")
     }
     
     @IBAction func slideChanged(_ sender: UISlider) {

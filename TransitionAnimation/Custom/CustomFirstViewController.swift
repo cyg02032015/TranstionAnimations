@@ -19,7 +19,9 @@ class CustomFirstViewController: UIViewController {
         let second: CustomSecondViewController = self.storyboard!.instantiateViewController(withIdentifier: "CustomSecondViewController") as! CustomSecondViewController
             
         let customPresentationController = CustomPresentationController(presentedViewController: second, presenting: self)
-        second.transitioningDelegate = customPresentationController
-        self.present(second, animated: true, completion: nil)
+        withExtendedLifetime(second) {
+            second.transitioningDelegate = customPresentationController
+            self.present(second, animated: true, completion: nil)
+        }
     }
 }
